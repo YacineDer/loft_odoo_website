@@ -11,3 +11,12 @@ class LoftWebsite(Website):
         return request.render('yd_website_loft.page_home', {
             'featured_projects': [],
         })
+
+    @http.route('/contactus', type='http', auth='public', website=True)
+    def loft_contact_page(self, **kwargs):
+        return request.render('yd_website_loft.page_contact')
+
+    @http.route('/contact/submit', type='http', auth='public', website=True, methods=['POST'])
+    def loft_contact_submit(self, **post):
+        # process form here
+        return request.redirect('/contact?success=1')
