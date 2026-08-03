@@ -1,69 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+<template id="loft_assets" name="Loft Assets">
+    <style>
+        .loft-card3d {
+            background: linear-gradient(145deg, #ffffff 0%, #f4f4f4 100%);
+            border: 1px solid rgba(158,158,158,0.18);
+            border-radius: 18px;
+            box-shadow: 0 2px 6px rgba(46,70,95,0.04), 0 16px 34px rgba(46,70,95,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
+            transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.35s cubic-bezier(0.2,0.8,0.2,1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(4px);
+        }
+        .loft-card3d:hover {
+            transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+            box-shadow: 0 8px 16px rgba(46,70,95,0.08), 0 26px 56px rgba(46,70,95,0.12), inset 0 1px 0 rgba(255,255,255,0.95);
+        }
+        .loft-card3d::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, #82aac8, #2e465f);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .loft-card3d:hover::before { opacity: 1; }
+        .loft-icon-box {
+            width: 58px; height: 58px;
+            border-radius: 16px;
+            background: linear-gradient(145deg, #2e465f 0%, #3d5874 100%);
+            display: flex; align-items: center; justify-content: center;
+            color: #e4e4e4; font-size: 20px;
+            box-shadow: 0 10px 24px rgba(46,70,95,0.20), inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+        .loft-hero-grid {
+            background-image:
+                linear-gradient(rgba(158,158,158,0.10) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(158,158,158,0.10) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+        .loft-hero-lines::before,
+        .loft-hero-lines::after {
+            content: "";
+            position: absolute;
+            inset: auto;
+            border: 1px solid rgba(130,170,200,0.18);
+            border-radius: 24px;
+            transform: rotate(-8deg);
+        }
+        .loft-hero-lines::before {
+            width: 420px; height: 420px; top: 60px; right: 8%;
+        }
+        .loft-hero-lines::after {
+            width: 300px; height: 300px; bottom: 80px; right: 18%;
+            transform: rotate(12deg);
+        }
+        .loft-stat-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f1f3f5 100%);
+            border: 1px solid rgba(158,158,158,0.18);
+            border-radius: 18px;
+            box-shadow: 0 2px 6px rgba(46,70,95,0.04), 0 16px 34px rgba(46,70,95,0.08), inset 0 1px 0 rgba(255,255,255,0.92);
+            transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.35s cubic-bezier(0.2,0.8,0.2,1);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        .loft-stat-card:hover {
+            transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+            box-shadow: 0 8px 16px rgba(46,70,95,0.08), 0 26px 56px rgba(46,70,95,0.14), inset 0 1px 0 rgba(255,255,255,0.96);
+        }
+        .loft-stat-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, #82aac8, #2e465f);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .loft-stat-card:hover::before { opacity: 1; }
+        .loft-stat-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: #2e465f;
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+        .loft-stat-label {
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: #9e9e9e;
+        }
+        @media (max-width: 992px) {
+            .loft-grid-4, .loft-grid-3, .loft-grid-2 { grid-template-columns: repeat(2,1fr) !important; }
+        }
+        @media (max-width: 768px) {
+            .loft-grid-4, .loft-grid-3, .loft-grid-2 { grid-template-columns: 1fr !important; }
+            .loft-about-grid { grid-template-columns: 1fr !important; }
+            .loft-stats-grid { grid-template-columns: 1fr !important; }
+            .loft-hero-title { font-size: 44px !important; }
+            .loft-hero-lines::before, .loft-hero-lines::after { display:none; }
+        }
+    </style>
+</template>
+
 <template id="loft_eyebrow" name="Loft Eyebrow">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
-        <span style="width:38px;height:2px;background:#c7a97a;display:inline-block;"/>
-        <span style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#a78657;font-weight:700;">
+        <span style="width:42px;height:3px;background:linear-gradient(90deg,#82aac8,#2e465f);display:inline-block;border-radius:2px;"/>
+        <span style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#2e465f;font-weight:700;">
             <t t-esc="text"/>
         </span>
     </div>
 </template>
 
 <template id="loft_cta_banner" name="Loft CTA Banner">
-    <section style="position:relative;padding:100px 0;background:#f3eee6;border-top:1px solid rgba(199,169,122,0.28);">
-        <div style="max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+    <section style="position:relative;padding:110px 0;background:#1f2d3a;overflow:hidden;">
+        <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.45;"/>
+        <div style="position:absolute;top:-140px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
+        <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
             <div style="max-width:640px;">
-                <t t-call="yd_website_loft.loft_eyebrow">
-                    <t t-set="text">GET STARTED</t>
-                </t>
-                <h2 style="font-size:40px;font-weight:800;color:#1f1a17;margin:0 0 16px;letter-spacing:-0.5px;line-height:1.15;">
-                    <t t-esc="cta_title or 'Have blueprints? Let&#8217;s build them.'"/>
-                </h2>
-                <p style="font-size:16px;line-height:1.7;color:rgba(31,26,23,0.68);margin:0;">
-                    <t t-esc="cta_text or 'Tell us about your site and we will come back with a scope, a schedule and a real number.'"/>
-                </p>
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+                    <span style="width:42px;height:3px;background:linear-gradient(90deg,#82aac8,#e4e4e4);display:inline-block;border-radius:2px;"/>
+                    <span style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#82aac8;font-weight:700;">تواصل معنا</span>
+                </div>
+                <h2 style="font-size:40px;font-weight:800;color:#ffffff;margin:0 0 16px;letter-spacing:-0.5px;line-height:1.15;">ابدأ مشروعك مع لوفت</h2>
+                <p style="font-size:16px;line-height:1.9;color:rgba(228,228,228,0.76);margin:0;max-width:620px;">نقدّم لك حلولاً متكاملة في قطاع البناء والتشييد، مع التزام واضح بالجودة، الدقة، والجدول الزمني في جميع مراحل التنفيذ.</p>
             </div>
-            <div style="text-align:center;flex-shrink:0;">
-                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(31,26,23,0.45);margin-bottom:8px;">Call us</div>
-                <div style="font-size:28px;font-weight:800;color:#a78657;letter-spacing:0.5px;">+965 XXXX XXXX</div>
+            <div class="loft-stat-card" style="text-align:center;flex-shrink:0;padding:28px 40px;min-width:260px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#9e9e9e;margin-bottom:8px;">الهاتف</div>
+                <div style="font-size:28px;font-weight:800;color:#82aac8;letter-spacing:0.5px;">٦٤٤٤٣٤٤٥</div>
             </div>
         </div>
     </section>
 </template>
 
 <template id="loft_process" name="Loft Process">
-    <section style="position:relative;padding:120px 0;background:#f7f4ee;">
+    <section style="position:relative;padding:130px 0;background:#f4f4f4;">
         <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:64px;">
                 <div>
                     <t t-call="yd_website_loft.loft_eyebrow">
                         <t t-set="text">HOW WE BUILD</t>
                     </t>
-                    <h2 style="font-size:44px;font-weight:800;color:#1f1a17;letter-spacing:-1px;margin:0;max-width:520px;line-height:1.15;">From site survey to handover, in four stages</h2>
+                    <h2 style="font-size:44px;font-weight:800;color:#2e465f;letter-spacing:-1px;margin:0;max-width:520px;line-height:1.15;">From site survey to handover, in four stages</h2>
                 </div>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);">
-                <div style="padding:0 28px 0 0;border-left:1px solid rgba(199,169,122,0.28);padding-left:28px;">
-                    <div style="font-size:56px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px rgba(167,134,87,0.45);line-height:1;margin-bottom:20px;">01</div>
-                    <h3 style="font-size:19px;font-weight:700;color:#1f1a17;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Consultation &amp; Survey</h3>
-                    <p style="font-size:14px;line-height:1.7;color:rgba(31,26,23,0.62);margin:0;">We walk the site, take real measurements and understand the brief and the budget before anything is drawn.</p>
+            <div class="loft-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+                <div class="loft-card3d" style="padding:36px 28px;">
+                    <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">01</div>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Consultation &amp; Survey</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">We walk the site, take real measurements and understand the brief and the budget before anything is drawn.</p>
                 </div>
-                <div style="padding-left:28px;border-left:1px solid rgba(199,169,122,0.28);">
-                    <div style="font-size:56px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px rgba(167,134,87,0.45);line-height:1;margin-bottom:20px;">02</div>
-                    <h3 style="font-size:19px;font-weight:700;color:#1f1a17;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Design &amp; Permits</h3>
-                    <p style="font-size:14px;line-height:1.7;color:rgba(31,26,23,0.62);margin:0;">Structural drawings, engineering sign-off and permit filing, handled so nothing stalls once crews mobilise.</p>
+                <div class="loft-card3d" style="padding:36px 28px;">
+                    <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">02</div>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Design &amp; Permits</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Structural drawings, engineering sign-off and permit filing, handled so nothing stalls once crews mobilise.</p>
                 </div>
-                <div style="padding-left:28px;border-left:1px solid rgba(199,169,122,0.28);">
-                    <div style="font-size:56px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px rgba(167,134,87,0.45);line-height:1;margin-bottom:20px;">03</div>
-                    <h3 style="font-size:19px;font-weight:700;color:#1f1a17;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Build</h3>
-                    <p style="font-size:14px;line-height:1.7;color:rgba(31,26,23,0.62);margin:0;">Our own crews and vetted trades execute against a fixed schedule, with weekly site reports back to you.</p>
+                <div class="loft-card3d" style="padding:36px 28px;">
+                    <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">03</div>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Build</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Our own crews and vetted trades execute against a fixed schedule, with weekly site reports back to you.</p>
                 </div>
-                <div style="padding-left:28px;border-left:1px solid rgba(199,169,122,0.28);">
-                    <div style="font-size:56px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px rgba(167,134,87,0.45);line-height:1;margin-bottom:20px;">04</div>
-                    <h3 style="font-size:19px;font-weight:700;color:#1f1a17;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Handover</h3>
-                    <p style="font-size:14px;line-height:1.7;color:rgba(31,26,23,0.62);margin:0;">Snagging, as-built documentation and warranty pack delivered before you get the keys.</p>
+                <div class="loft-card3d" style="padding:36px 28px;">
+                    <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">04</div>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Handover</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Snagging, as-built documentation and warranty pack delivered before you get the keys.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="loft_vision_mission" name="Loft Vision and Mission">
+    <section style="padding:130px 0;background:#ffffff;" dir="rtl" lang="ar">
+        <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+            <div style="text-align:right;margin-bottom:56px;">
+                <t t-call="yd_website_loft.loft_eyebrow">
+                    <t t-set="text">رؤيتنا ورسالتنا</t>
+                </t>
+            </div>
+            <div class="loft-grid-2" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+                <div class="loft-card3d" style="padding:48px 40px;text-align:right;">
+                    <div class="loft-icon-box" style="margin-right:0;margin-bottom:24px;">
+                        <i class="fa fa-eye" aria-hidden="true"/>
+                    </div>
+                    <h3 style="font-size:22px;font-weight:800;color:#2e465f;margin:0 0 16px;">الرؤية</h3>
+                    <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0;">قيادة مستقبل قطاع البناء في الكويت من خلال دمج التكنولوجيا المتقدمة والحلول الهندسية المبتكرة لبناء مجتمعات عمرانية ذكية ومستدامة تُلهم الأجيال.</p>
+                </div>
+                <div class="loft-card3d" style="padding:48px 40px;text-align:right;">
+                    <div class="loft-icon-box" style="margin-right:0;margin-bottom:24px;">
+                        <i class="fa fa-compass" aria-hidden="true"/>
+                    </div>
+                    <h3 style="font-size:22px;font-weight:800;color:#2e465f;margin:0 0 16px;">الرسالة</h3>
+                    <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0;">تسليم مشاريع إنشائية رائدة باستخدام أحدث الأدوات الرقمية وتقنيات الهندسة لضمان أقصى كفاءة في التنفيذ وجودة فائقة في المنتج النهائي، مع الحفاظ على قيمة مضافة لشركائنا والمجتمع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="loft_values" name="Loft Values">
+    <section style="padding:130px 0;background:#f4f4f4;" dir="rtl" lang="ar">
+        <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+            <div style="text-align:right;margin-bottom:56px;">
+                <t t-call="yd_website_loft.loft_eyebrow">
+                    <t t-set="text">قيمنا</t>
+                </t>
+                <h2 style="font-size:36px;font-weight:800;color:#2e465f;margin:0;max-width:640px;margin-right:0;margin-left:auto;line-height:1.4;">تسترشد شركة لوفت للمقاولات العامة بمجموعة من القيم الأساسية التي تشكّل أساس عملها ونموها المستمر.</h2>
+            </div>
+            <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                    <div class="loft-icon-box" style="margin-right:0;margin-bottom:24px;">
+                        <i class="fa fa-medal" aria-hidden="true"/>
+                    </div>
+                    <h3 style="font-size:18px;font-weight:800;color:#2e465f;margin:0 0 10px;">الجودة والاحترافية</h3>
+                    <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ المشاريع وفق أعلى المعايير وأفضل الممارسات العالمية.</p>
+                </div>
+                <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                    <div class="loft-icon-box" style="margin-right:0;margin-bottom:24px;">
+                        <i class="fa fa-handshake" aria-hidden="true"/>
+                    </div>
+                    <h3 style="font-size:18px;font-weight:800;color:#2e465f;margin:0 0 10px;">النزاهة والالتزام</h3>
+                    <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">بناء علاقات طويلة الأمد قائمة على الثقة مع عملائنا.</p>
+                </div>
+                <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                    <div class="loft-icon-box" style="margin-right:0;margin-bottom:24px;">
+                        <i class="fa fa-lightbulb" aria-hidden="true"/>
+                    </div>
+                    <h3 style="font-size:18px;font-weight:800;color:#2e465f;margin:0 0 10px;">الابتكار والاستدامة</h3>
+                    <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تقديم حلول حديثة تراعي المستقبل وتواكب تطلعات السوق.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="loft_contact_strip" name="Loft Contact Strip">
+    <section style="padding:80px 0;background:#1f2d3a;" dir="rtl" lang="ar">
+        <div style="max-width:1180px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;">
+            <div class="loft-stat-card" style="flex:1;min-width:220px;padding:28px 32px;text-align:right;background:linear-gradient(145deg,#ffffff 0%,#f4f4f4 100%);">
+                <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#82aac8;margin-bottom:8px;">الهاتف</div>
+                <div style="font-size:20px;font-weight:700;color:#2e465f;">٦٤٤٤٣٤٤٥</div>
+            </div>
+            <div class="loft-stat-card" style="flex:1;min-width:220px;padding:28px 32px;text-align:right;background:linear-gradient(145deg,#ffffff 0%,#f4f4f4 100%);">
+                <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#82aac8;margin-bottom:8px;">البريد الإلكتروني</div>
+                <div style="font-size:20px;font-weight:700;color:#2e465f;">Info@loftgulf.com</div>
+            </div>
+            <div class="loft-stat-card" style="flex:1;min-width:260px;padding:28px 32px;text-align:right;background:linear-gradient(145deg,#ffffff 0%,#f4f4f4 100%);">
+                <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#82aac8;margin-bottom:8px;">العنوان</div>
+                <div style="font-size:15px;font-weight:600;line-height:1.6;color:#2e465f;">جبلة - شارع فهد السالم - برج سنام - الدور ١٦</div>
             </div>
         </div>
     </section>
@@ -72,99 +260,115 @@
 <template id="page_home" name="Loft Construction — Home">
     <t t-call="website.layout">
         <t t-set="title">Loft Construction — General Contracting &amp; Renovation</t>
-        <div id="wrap" style="background:#f7f4ee;color:#1f1a17;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+        <t t-call="yd_website_loft.loft_assets"/>
+        <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
 
-            <section style="position:relative;min-height:92vh;display:flex;align-items:center;">
-                <div style="position:absolute;inset:0;z-index:0;">
-                    <img src="/yd_website_loft/static/src/images/loft2.jpg" alt="Loft Construction"
-                         style="width:100%;height:100%;object-fit:cover;display:block;"/>
-                    <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(247,244,238,0.94) 0%, rgba(247,244,238,0.74) 42%, rgba(247,244,238,0.18) 100%);"/>
-                </div>
+            <section class="loft-hero-lines" style="position:relative;min-height:94vh;display:flex;align-items:center;background:linear-gradient(135deg,#f4f4f4 0%,#eceff2 40%,#dde5eb 100%);overflow:hidden;">
+                <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.65;"/>
+                <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
+                <div style="position:absolute;bottom:-120px;right:-40px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,70,95,0.08) 0%,transparent 75%);border-radius:50%;"/>
                 <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;">
-                    <div style="max-width:640px;">
+                    <div style="max-width:700px;">
                         <t t-call="yd_website_loft.loft_eyebrow">
-                            <t t-set="text">GENERAL CONTRACTING · EST. 2019</t>
+                            <t t-set="text">LOFT ARCHITECTURE &amp; CONTRACTING</t>
                         </t>
-                        <h1 style="font-size:64px;font-weight:800;line-height:1.02;letter-spacing:-2px;margin:0 0 26px;color:#1f1a17;text-transform:uppercase;">
-                            We Build<br/>What You<br/>
-                            <span style="color:#a78657;">Approved.</span>
+                        <h1 class="loft-hero-title" style="font-size:68px;font-weight:800;line-height:1.02;letter-spacing:-2px;margin:0 0 26px;color:#2e465f;text-transform:uppercase;max-width:760px;">
+                            LOFT <br/>Construction
                         </h1>
-                        <p style="font-size:17px;line-height:1.7;color:rgba(31,26,23,0.78);max-width:460px;margin:0 0 40px;">
-                            Loft Construction delivers residential, commercial and industrial projects on a fixed scope, a fixed schedule and a number that doesn't move once the contract is signed.
+                        <p style="font-size:17px;line-height:1.9;color:#6f7c88;max-width:560px;margin:0 0 40px;">
+                            شركة لوفت للمقاولات العامة هي شركة متخصصة في قطاع التشييد والبناء، وتعمل في دولة الكويت منذ عام 2019. منذ تأسيسها، سعت الشركة إلى أن تكون شريكاً موثوقاً في تنفيذ المشاريع المعمارية الحديثة.
                         </p>
                     </div>
                 </div>
-                <div style="position:absolute;bottom:0;left:0;right:0;transform:translateY(50%);z-index:2;">
+                <div style="position:absolute;bottom:0;left:0;right:0;transform:translateY(-10%);z-index:4;">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
-                        <div style="background:#ffffff;border:1px solid rgba(199,169,122,0.3);display:grid;grid-template-columns:repeat(3,1fr);box-shadow:0 18px 50px rgba(31,26,23,0.08);">
-                            <div style="padding:32px 24px;text-align:center;border-right:1px solid rgba(199,169,122,0.18);">
-                                <div style="font-size:34px;font-weight:800;color:#a78657;line-height:1;">6</div>
-                                <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(31,26,23,0.5);margin-top:8px;">Years On Site</div>
+                        <div class="loft-stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;">
+                            <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
+                                <div class="loft-stat-number">2019</div>
+                                <div class="loft-stat-label">تأسست في الكويت</div>
                             </div>
-                            <div style="padding:32px 24px;text-align:center;border-right:1px solid rgba(199,169,122,0.18);">
-                                <div style="font-size:34px;font-weight:800;color:#a78657;line-height:1;">40+</div>
-                                <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(31,26,23,0.5);margin-top:8px;">Projects Delivered</div>
+                            <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
+                                <div class="loft-stat-number">QUALITY</div>
+                                <div class="loft-stat-label">الجودة والاحترافية</div>
                             </div>
-                            <div style="padding:32px 24px;text-align:center;border-right:1px solid rgba(199,169,122,0.18);">
-                                <div style="font-size:34px;font-weight:800;color:#a78657;line-height:1;">20+</div>
-                                <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(31,26,23,0.5);margin-top:8px;">Specialists</div>
+                            <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
+                                <div class="loft-stat-number">TRUST</div>
+                                <div class="loft-stat-label">النزاهة والالتزام</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section style="padding:180px 0 110px;background:#f7f4ee;">
-                <div style="max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:0.4fr 1.6fr;gap:64px;align-items:center;">
-                    <div style="display:flex;align-items:center;justify-content:center;background:#ffffff;border:1px solid rgba(199,169,122,0.24);padding:36px;aspect-ratio:1/1;box-shadow:0 12px 34px rgba(31,26,23,0.06);">
+            <section style="padding:250px 0 120px;background:#f4f4f4;">
+                <div class="loft-about-grid" style="max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:0.42fr 1.58fr;gap:64px;align-items:center;">
+                    <div class="loft-card3d" style="display:flex;align-items:center;justify-content:center;padding:36px;aspect-ratio:1/1;">
                        <img src="/logo.png" alt="Loft Construction Logo" style="max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1) invert(1) brightness(1.15);"/>
                     </div>
                     <div dir="rtl" lang="ar" style="text-align:right;">
                         <t t-call="yd_website_loft.loft_eyebrow">
                             <t t-set="text">من نحن</t>
                         </t>
-                        <h2 style="font-size:32px;font-weight:800;color:#1f1a17;line-height:1.5;margin:0 0 22px;">
-                            شركة لوفت للتشييد
+                        <h2 style="font-size:32px;font-weight:800;color:#2e465f;line-height:1.5;margin:0 0 22px;">
+                            شركة لوفت للمقاولات العامة
                         </h2>
-                        <p style="font-size:16px;line-height:2;color:rgba(31,26,23,0.72);margin:0 0 16px;">
-                            شركة لوفت للتشييد المباني تعمل منذ 2019 في الكويت، لتكون شريكًا موثوقًا في تنفيذ المشاريع العمرانية الحديثة.
+                        <p style="font-size:16px;line-height:2;color:#9e9e9e;margin:0 0 16px;">
+                            شركة لوفت للمقاولات العامة هي شركة متخصصة في قطاع التشييد والبناء، وتعمل في دولة الكويت منذ عام 2019. منذ تأسيسها، سعت الشركة إلى أن تكون شريكاً موثوقاً في تنفيذ المشاريع المعمارية الحديثة.
                         </p>
-                        <p style="font-size:16px;line-height:2;color:rgba(31,26,23,0.72);margin:0;">
-                            منذ انطلاقتها، وضعت الشركة نصب أعينها الجمع بين الجودة العالية والالتزام بالمواعيد، لتقديم حلول متكاملة في مجال البناء والتشييد.
+                        <p style="font-size:16px;line-height:2;color:#9e9e9e;margin:0;">
+                            منذ البداية، ركزت الشركة على تحقيق التوازن بين الجودة العالية والالتزام بالمواعيد النهائية من خلال تقديم حلول متكاملة تلبي احتياجات السوق في قطاع البناء والتشييد. وتعتمد الشركة على فريق متخصص ومنهجية تنفيذ احترافية لضمان إنجاز المشاريع بكفاءة وجودة عالية، بما يحقق تطلعات العملاء ويواكب التطور العمراني في الكويت.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section style="padding:110px 0;background:#f3eee6;">
+            <t t-call="yd_website_loft.loft_vision_mission"/>
+
+            <t t-call="yd_website_loft.loft_values"/>
+
+            <section style="padding:130px 0;background:#ffffff;">
                 <div style="max-width:1180px;margin:0 auto;padding:0 24px;" dir="rtl" lang="ar">
                     <div style="text-align:right;margin-bottom:56px;">
                         <t t-call="yd_website_loft.loft_eyebrow">
                             <t t-set="text">خدماتنا</t>
                         </t>
-                        <h2 style="font-size:40px;font-weight:800;color:#1f1a17;margin:0;max-width:560px;margin-right:0;margin-left:auto;line-height:1.3;">كل ما يحتاجه مشروعك تحت عقد واحد</h2>
+                        <h2 style="font-size:40px;font-weight:800;color:#2e465f;margin:0;max-width:620px;margin-right:0;margin-left:auto;line-height:1.3;">شركة لوفت للإنشاءات تقدم مجموعة شاملة من الخدمات في قطاع البناء</h2>
                     </div>
-                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(199,169,122,0.22);">
-                        <div style="background:#ffffff;padding:44px 32px;text-align:right;">
-                            <div style="width:50px;height:50px;border:1.5px solid #c7a97a;display:flex;align-items:center;justify-content:center;color:#a78657;font-size:20px;margin-bottom:26px;margin-right:0;">
-                                <i class="fa fa-paint-roller" aria-hidden="true"/>
+                    <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                        <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                            <div class="loft-icon-box" style="margin-right:0;margin-bottom:26px;">
+                                <i class="fa fa-home" aria-hidden="true"/>
                             </div>
-                            <h3 style="font-size:20px;font-weight:800;color:#1f1a17;margin:0 0 12px;">أعمال التشطيب الشاملة</h3>
-                            <p style="font-size:14px;line-height:1.9;color:rgba(31,26,23,0.62);margin:0;">تشطيبات داخلية وخارجية متكاملة بأعلى معايير الجودة والدقة.</p>
+                            <h3 style="font-size:19px;font-weight:800;color:#2e465f;margin:0 0 12px;">تنفيذ مشاريع البناء السكني</h3>
+                            <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ مشاريع البناء السكني في جميع المراحل، وفق أعلى معايير الجودة.</p>
                         </div>
-                        <div style="background:#ffffff;padding:44px 32px;text-align:right;">
-                            <div style="width:50px;height:50px;border:1.5px solid #c7a97a;display:flex;align-items:center;justify-content:center;color:#a78657;font-size:20px;margin-bottom:26px;margin-right:0;">
-                                <i class="fa fa-building" aria-hidden="true"/>
-                            </div>
-                            <h3 style="font-size:20px;font-weight:800;color:#1f1a17;margin:0 0 12px;">أعمال الهيكل الإنشائي</h3>
-                            <p style="font-size:14px;line-height:1.9;color:rgba(31,26,23,0.62);margin:0;">تنفيذ الهياكل الخرسانية والإنشائية وفق أعلى معايير السلامة.</p>
-                        </div>
-                        <div style="background:#ffffff;padding:44px 32px;text-align:right;">
-                            <div style="width:50px;height:50px;border:1.5px solid #c7a97a;display:flex;align-items:center;justify-content:center;color:#a78657;font-size:20px;margin-bottom:26px;margin-right:0;">
+                        <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                            <div class="loft-icon-box" style="margin-right:0;margin-bottom:26px;">
                                 <i class="fa fa-tools" aria-hidden="true"/>
                             </div>
-                            <h3 style="font-size:20px;font-weight:800;color:#1f1a17;margin:0 0 12px;">أعمال الصيانة والترميم</h3>
-                            <p style="font-size:14px;line-height:1.9;color:rgba(31,26,23,0.62);margin:0;">خدمات صيانة وترميم شاملة تحافظ على جودة المبنى مع مرور الزمن.</p>
+                            <h3 style="font-size:19px;font-weight:800;color:#2e465f;margin:0 0 12px;">أعمال الترميم والصيانة</h3>
+                            <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إعادة تأهيل المباني وتقديم حلول صيانة مستدامة.</p>
+                        </div>
+                        <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                            <div class="loft-icon-box" style="margin-right:0;margin-bottom:26px;">
+                                <i class="fa fa-building" aria-hidden="true"/>
+                            </div>
+                            <h3 style="font-size:19px;font-weight:800;color:#2e465f;margin:0 0 12px;">الأعمال الإنشائية الخرسانية</h3>
+                            <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ الأعمال الإنشائية الخرسانية بدقة عالية ووفق المواصفات الفنية المعتمدة.</p>
+                        </div>
+                        <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                            <div class="loft-icon-box" style="margin-right:0;margin-bottom:26px;">
+                                <i class="fa fa-paint-roller" aria-hidden="true"/>
+                            </div>
+                            <h3 style="font-size:19px;font-weight:800;color:#2e465f;margin:0 0 12px;">أعمال التشطيبات الكاملة</h3>
+                            <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ أعمال التشطيبات الكاملة وفق المواصفات المعتمدة وبجودة عالية.</p>
+                        </div>
+                        <div class="loft-card3d" style="padding:44px 32px;text-align:right;">
+                            <div class="loft-icon-box" style="margin-right:0;margin-bottom:26px;">
+                                <i class="fa fa-drafting-compass" aria-hidden="true"/>
+                            </div>
+                            <h3 style="font-size:19px;font-weight:800;color:#2e465f;margin:0 0 12px;">إدارة المشاريع والإشراف الهندسي</h3>
+                            <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إدارة المشاريع والإشراف الهندسي وفق منهجية احترافية واضحة تضمن جودة التنفيذ.</p>
                         </div>
                     </div>
                 </div>
@@ -172,27 +376,27 @@
 
             <t t-call="yd_website_loft.loft_process"/>
 
-            <section style="padding:120px 0;background:#f3eee6;">
+            <section style="padding:130px 0;background:#f4f4f4;">
                 <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
                     <t t-call="yd_website_loft.loft_eyebrow">
                         <t t-set="text">SELECTED WORK</t>
                     </t>
-                    <h2 style="font-size:44px;font-weight:800;color:#1f1a17;letter-spacing:-1px;margin:0 0 56px;">Recently completed</h2>
-                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(199,169,122,0.16);">
+                    <h2 style="font-size:44px;font-weight:800;color:#2e465f;letter-spacing:-1px;margin:0 0 56px;">Recently completed</h2>
+                    <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
                         <t t-foreach="featured_projects" t-as="project">
-                            <div style="background:#ffffff;">
-                                <div style="position:relative;aspect-ratio:4/3;overflow:hidden;">
+                            <div class="loft-card3d" style="padding:0;">
+                                <div style="position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:18px 18px 0 0;">
                                     <img t-if="project.image" t-att-src="'/web/image/loft.project/%s/image' % project.id"
                                          t-att-alt="project.name" style="width:100%;height:100%;object-fit:cover;display:block;"/>
-                                    <div t-else="" style="width:100%;height:100%;background:#efe8da;"/>
-                                    <span t-if="project.area_sqm" style="position:absolute;top:14px;left:14px;font-size:11px;color:#ffffff;background:#a78657;padding:4px 10px;font-weight:700;">
+                                    <div t-else="" style="width:100%;height:100%;background:#e4e4e4;"/>
+                                    <span t-if="project.area_sqm" style="position:absolute;top:14px;left:14px;font-size:11px;color:#ffffff;background:#2e465f;padding:4px 10px;font-weight:700;border-radius:6px;">
                                         <t t-esc="int(project.area_sqm)"/> M&#178;
                                     </span>
                                 </div>
-                                <div style="padding:26px 20px 28px;">
-                                    <span style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#a78657;font-weight:700;" t-esc="project.category_id.name"/>
-                                    <h3 style="font-size:18px;font-weight:700;color:#1f1a17;margin:12px 0 8px;" t-esc="project.name"/>
-                                    <p style="font-size:14px;line-height:1.6;color:rgba(31,26,23,0.62);margin:0;" t-esc="project.short_description"/>
+                                <div style="padding:26px 22px 30px;">
+                                    <span style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#82aac8;font-weight:700;" t-esc="project.category_id.name"/>
+                                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:12px 0 8px;" t-esc="project.name"/>
+                                    <p style="font-size:14px;line-height:1.6;color:#9e9e9e;margin:0;" t-esc="project.short_description"/>
                                 </div>
                             </div>
                         </t>
@@ -201,6 +405,9 @@
             </section>
 
             <t t-call="yd_website_loft.loft_cta_banner"/>
+
+            <t t-call="yd_website_loft.loft_contact_strip"/>
+
         </div>
     </t>
 </template>
