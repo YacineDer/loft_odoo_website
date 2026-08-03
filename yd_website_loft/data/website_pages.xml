@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="page_home" model="website.page">
+        <field name="url">/</field>
+        <field name="view_id" ref="yd_website_loft.home_page"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="is_published">True</field>
+    </record>
+</odoo>
