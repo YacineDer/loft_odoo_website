@@ -143,31 +143,31 @@
             <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:64px;">
                 <div>
                     <t t-call="yd_website_loft.loft_eyebrow">
-                        <t t-set="text">HOW WE BUILD</t>
+                        <t t-set="text">آلية العمل</t>
                     </t>
-                    <h2 style="font-size:44px;font-weight:800;color:#2e465f;letter-spacing:-1px;margin:0;max-width:520px;line-height:1.15;">From site survey to handover, in four stages</h2>
+                    <h2 style="font-size:44px;font-weight:800;color:#2e465f;letter-spacing:-1px;margin:0;max-width:520px;line-height:1.15;">من المعاينة الميدانية إلى التسليم النهائي، عبر أربع مراحل واضحة</h2>
                 </div>
             </div>
             <div class="loft-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
                 <div class="loft-card3d" style="padding:36px 28px;">
                     <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">01</div>
-                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Consultation &amp; Survey</h3>
-                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">We walk the site, take real measurements and understand the brief and the budget before anything is drawn.</p>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">الاستشارة والمعاينة</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">نقوم بزيارة الموقع، وأخذ القياسات الفعلية، وفهم متطلبات المشروع والميزانية قبل البدء بأي أعمال تصميم أو تنفيذ.</p>
                 </div>
                 <div class="loft-card3d" style="padding:36px 28px;">
                     <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">02</div>
-                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Design &amp; Permits</h3>
-                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Structural drawings, engineering sign-off and permit filing, handled so nothing stalls once crews mobilise.</p>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">التصميم والتصاريح</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">نعمل على إعداد المخططات الهندسية والاعتمادات الفنية واستكمال إجراءات التصاريح بما يضمن انطلاق التنفيذ دون تأخير.</p>
                 </div>
                 <div class="loft-card3d" style="padding:36px 28px;">
                     <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">03</div>
-                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Build</h3>
-                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Our own crews and vetted trades execute against a fixed schedule, with weekly site reports back to you.</p>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">التنفيذ</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">تتولى فرقنا التنفيذ وفق جدول زمني واضح، مع متابعة مستمرة وتقارير دورية تضمن جودة الإنجاز في كل مرحلة.</p>
                 </div>
                 <div class="loft-card3d" style="padding:36px 28px;">
                     <div style="font-size:52px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px #82aac8;line-height:1;margin-bottom:20px;">04</div>
-                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">Handover</h3>
-                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">Snagging, as-built documentation and warranty pack delivered before you get the keys.</p>
+                    <h3 style="font-size:18px;font-weight:700;color:#2e465f;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.5px;">التسليم</h3>
+                    <p style="font-size:14px;line-height:1.7;color:#9e9e9e;margin:0;">ننجز أعمال المراجعة النهائية، وتسليم المستندات اللازمة، وضمان جاهزية المشروع قبل التسليم الكامل للعميل.</p>
                 </div>
             </div>
         </div>
@@ -270,7 +270,7 @@
                 <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;">
                     <div style="max-width:700px;">
                         <t t-call="yd_website_loft.loft_eyebrow">
-                            <t t-set="text">LOFT ARCHITECTURE &amp; CONTRACTING</t>
+                            <t t-set="text">LOFT FOR BUILDING CONSTRUCTION</t>
                         </t>
                         <h1 class="loft-hero-title" style="font-size:68px;font-weight:800;line-height:1.02;letter-spacing:-2px;margin:0 0 26px;color:#2e465f;text-transform:uppercase;max-width:760px;">
                             LOFT <br/>Construction
@@ -284,16 +284,13 @@
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
                         <div class="loft-stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;">
                             <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
-                                <div class="loft-stat-number">2019</div>
-                                <div class="loft-stat-label">تأسست في الكويت</div>
+                                <div class="loft-stat-number">تأسست في الكويت</div>
                             </div>
                             <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
-                                <div class="loft-stat-number">QUALITY</div>
-                                <div class="loft-stat-label">الجودة والاحترافية</div>
+                                <div class="loft-stat-number">الجودة والاحترافية</div>
                             </div>
                             <div class="loft-stat-card" style="padding:34px 24px 30px;text-align:center;">
-                                <div class="loft-stat-number">TRUST</div>
-                                <div class="loft-stat-label">النزاهة والالتزام</div>
+                                <div class="loft-stat-number"> النزاهة والالتزام</div>
                             </div>
                         </div>
                     </div>
