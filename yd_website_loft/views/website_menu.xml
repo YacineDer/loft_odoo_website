@@ -1,0 +1,16 @@
+<odoo>
+    <record id="menu_about_us_loft" model="website.menu">
+        <field name="name">About Us </field>
+        <field name="url">/about-us</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" eval="30"/>
+    </record>
+
+    <record id="menu_our_works_loft" model="website.menu">
+        <field name="name">Projects</field>
+        <field name="url">/our-works</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" eval="31"/>
+    </record>
+
+</odoo>

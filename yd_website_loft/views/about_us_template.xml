@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="page_about_us_view" name="Loft Construction About Us View">
+        <t t-call="website.layout">
+            <t t-set="title">Loft Construction — About Us</t>
+            <t t-call="yd_website_loft.loft_assets"/>
+
+            <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+
+                <section class="loft-hero-lines" style="position:relative;padding:130px 0 110px;background:linear-gradient(135deg,#f4f4f4 0%,#eceff2 40%,#dde5eb 100%);overflow:hidden;">
+                    <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.65;"/>
+                    <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
+                    <div style="position:absolute;bottom:-120px;right:-40px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,70,95,0.08) 0%,transparent 75%);border-radius:50%;"/>
+
+                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" dir="rtl" lang="ar">
+                        <div style="max-width:760px;text-align:right;margin-left:auto;">
+                            <t t-call="yd_website_loft.loft_eyebrow">
+                                <t t-set="text">من نحن</t>
+                            </t>
+                            <h1 class="loft-hero-title" style="font-size:62px;font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin:0 0 22px;color:#2e465f;">
+                                شركة لوفت للمقاولات العامة
+                            </h1>
+                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 18px auto;">
+                                نعمل في قطاع البناء والتشييد في دولة الكويت بمنهجية تنفيذ احترافية تركّز على الجودة، الالتزام، والدقة في جميع مراحل المشروع.
+                            </p>
+                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 auto;">
+                                نسعى إلى بناء علاقة طويلة الأمد مع عملائنا من خلال حلول متكاملة تجمع بين الخبرة الفنية، كفاءة التنفيذ، وفهم متطلبات السوق العمراني الحديث.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="padding:100px 0;background:#ffffff;" dir="rtl" lang="ar">
+                    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+                        <div class="loft-grid-2" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:24px;">
+                            <div class="loft-card3d" style="padding:44px 36px;text-align:right;">
+                                <t t-call="yd_website_loft.loft_eyebrow">
+                                    <t t-set="text">قصتنا</t>
+                                </t>
+                                <h2 style="font-size:30px;font-weight:800;color:#2e465f;margin:0 0 16px;line-height:1.4;">
+                                    خبرة تنفيذية ورؤية واضحة
+                                </h2>
+                                <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0 0 14px;">
+                                    تأسست شركة لوفت للمقاولات العامة لتقديم نموذج عمل يعتمد على الاحترافية والوضوح في إدارة وتنفيذ المشاريع الإنشائية.
+                                </p>
+                                <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0;">
+                                    نؤمن بأن نجاح المشروع لا يقاس فقط بجودة النتيجة النهائية، بل أيضاً بجودة التجربة كاملة من التخطيط وحتى التسليم.
+                                </p>
+                            </div>
+
+                            <div class="loft-card3d" style="padding:44px 36px;text-align:right;">
+                                <t t-call="yd_website_loft.loft_eyebrow">
+                                    <t t-set="text">ما الذي يميزنا</t>
+                                </t>
+                                <ul style="list-style:none;margin:0;padding:0;display:grid;gap:14px;">
+                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">إدارة دقيقة للمشروع من البداية إلى النهاية.</span></li>
+                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">التزام واضح بالجودة والمواصفات الفنية.</span></li>
+                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">تنسيق احترافي بين فرق التنفيذ والإشراف.</span></li>
+                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">حلول تناسب طبيعة المشروع وتطلعات العميل.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <t t-call="yd_website_loft.loft_vision_mission"/>
+                <t t-call="yd_website_loft.loft_values"/>
+                <t t-call="yd_website_loft.loft_contact_strip"/>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="page_our_works_view" name="Loft Construction Our Works View">
+        <t t-call="website.layout">
+            <t t-set="title">Loft Construction — Our Works</t>
+            <t t-call="yd_website_loft.loft_assets"/>
+
+            <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+
+                <section class="loft-hero-lines" style="position:relative;padding:130px 0 110px;background:linear-gradient(135deg,#f4f4f4 0%,#eceff2 40%,#dde5eb 100%);overflow:hidden;">
+                    <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.65;"/>
+                    <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
+                    <div style="position:absolute;bottom:-120px;right:-40px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,70,95,0.08) 0%,transparent 75%);border-radius:50%;"/>
+
+                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" dir="rtl" lang="ar">
+                        <div style="max-width:760px;text-align:right;margin-left:auto;">
+                            <t t-call="yd_website_loft.loft_eyebrow">
+                                <t t-set="text">أعمالنا</t>
+                            </t>
+                            <h1 class="loft-hero-title" style="font-size:62px;font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin:0 0 22px;color:#2e465f;">
+                                مشاريع تعبّر عن الجودة والالتزام
+                            </h1>
+                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 auto 0 0;">
+                                نستعرض مجموعة من الأعمال والمشاريع التي تعكس مستوى التنفيذ، الدقة، والاهتمام بالتفاصيل في مختلف مراحل البناء والتشييد.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="padding:100px 0;background:#f4f4f4;" dir="rtl" lang="ar">
+                    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+                        <div style="text-align:right;margin-bottom:46px;">
+                            <t t-call="yd_website_loft.loft_eyebrow">
+                                <t t-set="text">مشاريع مختارة</t>
+                            </t>
+                            <h2 style="font-size:36px;font-weight:800;color:#2e465f;line-height:1.35;margin:0;">
+                                نماذج من أعمال شركة لوفت
+                            </h2>
+                        </div>
+
+                        <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                                    <i class="fa fa-building" aria-hidden="true"/>
+                                </div>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">مشروع سكني</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ أعمال إنشائية وتشطيبات متكاملة وفق أعلى معايير الجودة.</p>
+                            </div>
+
+                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                                    <i class="fa fa-tools" aria-hidden="true"/>
+                                </div>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">أعمال ترميم</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إعادة تأهيل وتطوير المباني مع الحفاظ على كفاءة التنفيذ والجودة.</p>
+                            </div>
+
+                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                                    <i class="fa fa-drafting-compass" aria-hidden="true"/>
+                                </div>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">إدارة وإشراف</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إدارة مشروع هندسي بمنهجية واضحة تضمن التنسيق والالتزام بالجدول الزمني.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="padding:100px 0;background:#ffffff;" dir="rtl" lang="ar">
+                    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+                        <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-stat-label" style="color:#82aac8;">الدقة</div>
+                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">تنفيذ منظم</div>
+                            </div>
+                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-stat-label" style="color:#82aac8;">الجودة</div>
+                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">نتائج موثوقة</div>
+                            </div>
+                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
+                                <div class="loft-stat-label" style="color:#82aac8;">الالتزام</div>
+                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">تسليم باحترافية</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <t t-call="yd_website_loft.loft_contact_strip"/>
+
+            </div>
+        </t>
+    </template>
+
+    <record id="website_page_about_us" model="website.page">
+        <field name="name">About Us</field>
+        <field name="url">/about-us</field>
+        <field name="view_id" ref="yd_website_loft.page_about_us_view"/>
+        <field name="is_published">True</field>
+    </record>
+
+    <record id="website_page_our_works" model="website.page">
+        <field name="name">Our Works</field>
+        <field name="url">/our-works</field>
+        <field name="view_id" ref="yd_website_loft.page_our_works_view"/>
+        <field name="is_published">True</field>
+    </record>
+
+</odoo>
