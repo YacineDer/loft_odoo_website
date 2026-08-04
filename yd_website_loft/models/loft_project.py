@@ -7,8 +7,10 @@ class LoftProject(models.Model):
 
     name = fields.Char(required=True, translate=True)
     sequence = fields.Integer(default=10)
+    image = fields.Image(string='Main Image')
     image_ids = fields.One2many('loft.project.image', 'project_id', string='Images')
     short_description = fields.Text(translate=True)
+    area_sqm = fields.Float(string='Area (sqm)')
     website_published = fields.Boolean(default=True)
 
 
