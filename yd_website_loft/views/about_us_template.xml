@@ -121,7 +121,7 @@
 
                             <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
                                 <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
-                                    <i class="fa fa-tools" aria-hidden="true"/>
+                                    <i class="fa fa-wrench" aria-hidden="true"/>
                                 </div>
                                 <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">أعمال ترميم</h3>
                                 <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إعادة تأهيل وتطوير المباني مع الحفاظ على كفاءة التنفيذ والجودة.</p>
@@ -129,7 +129,7 @@
 
                             <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
                                 <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
-                                    <i class="fa fa-drafting-compass" aria-hidden="true"/>
+                                    <i class="fa fa-cogs" aria-hidden="true"/>
                                 </div>
                                 <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">إدارة وإشراف</h3>
                                 <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إدارة مشروع هندسي بمنهجية واضحة تضمن التنسيق والالتزام بالجدول الزمني.</p>
@@ -141,18 +141,30 @@
                 <section style="padding:100px 0;background:#ffffff;" dir="rtl" lang="ar">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
                         <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-stat-label" style="color:#82aac8;">الدقة</div>
-                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">تنفيذ منظم</div>
-                            </div>
-                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-stat-label" style="color:#82aac8;">الجودة</div>
-                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">نتائج موثوقة</div>
-                            </div>
-                            <div class="loft-stat-card" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-stat-label" style="color:#82aac8;">الالتزام</div>
-                                <div style="font-size:24px;font-weight:800;color:#2e465f;margin-top:10px;">تسليم باحترافية</div>
-                            </div>
+                            <t t-foreach="projects" t-as="project">
+                                <div class="loft-card3d o_loft_project_card">
+                                    <div class="o_loft_project_gallery">
+                                        <t t-if="project.image_ids">
+                                            <t t-foreach="project.image_ids" t-as="img">
+                                                <img t-att-src="'/web/image/loft.project.image/%s/image' % img.id"
+                                                     t-att-alt="project.name"
+                                                     t-attf-class="o_loft_gallery_img #{img_index == 0 and 'active' or ''}"/>
+                                            </t>
+                                        </t>
+                                        <div t-else="" class="o_loft_no_image"/>
+
+                                        <div t-if="len(project.image_ids) > 1" class="o_loft_gallery_dots">
+                                            <t t-foreach="project.image_ids" t-as="img">
+                                                <span t-attf-class="o_loft_dot #{img_index == 0 and 'active' or ''}"/>
+                                            </t>
+                                        </div>
+
+                                        <span t-if="project.area_sqm" class="o_loft_area_badge">
+                                            <t t-esc="int(project.area_sqm)"/> م²
+                                        </span>
+                                    </div>
+                                </div>
+                            </t>
                         </div>
                     </div>
                 </section>
