@@ -12,22 +12,22 @@
                 <t t-call="yd_website_loft.loft_assets"/>
                 <t t-set="company" t-value="website.company_id"/>
 
-                <section style="padding:54px 0 30px;" dir="rtl" lang="ar">
+                <section style="padding:54px 0 30px;" dir="ltr" lang="en">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
 
                         <!-- top strip -->
                         <div class="loft-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start;padding-bottom:34px;">
 
-                            <div style="text-align:right;">
-                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">كيف يمكننا مساعدتك؟</div>
+                            <div style="text-align:left;">
+                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">Contact Us</div>
                                 <a href="/contactus"
-                                   style="display:inline-flex;align-items:center;justify-content:center;min-width:180px;height:54px;padding:0 26px;border:none;border-radius:14px;background:linear-gradient(145deg,#2e465f 0%,#3d5874 100%);color:#ffffff;text-decoration:none;font-size:15px;font-weight:700;box-shadow:0 12px 26px rgba(46,70,95,0.20);transition:all .3s ease;">
-                                    تواصل معنا
+                                   style="font-size:20px;font-weight:700;color:#2e465f;text-decoration:none;line-height:1.6;">
+                                    Contact Us
                                 </a>
                             </div>
 
-                            <div style="text-align:right;">
-                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">اتصل بنا</div>
+                            <div style="text-align:left;">
+                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">Call Us</div>
                                 <a t-if="company.phone"
                                    t-att-href="'tel:%s' % company.phone"
                                    t-esc="company.phone"
@@ -35,8 +35,8 @@
                                 <span t-else="" style="font-size:18px;color:#9e9e9e;">—</span>
                             </div>
 
-                            <div style="text-align:right;">
-                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">راسلنا</div>
+                            <div style="text-align:left;">
+                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">Email Us</div>
                                 <a t-if="company.email"
                                    t-att-href="'mailto:%s' % company.email"
                                    t-esc="company.email"
@@ -44,8 +44,8 @@
                                 <span t-else="" style="font-size:18px;color:#9e9e9e;">—</span>
                             </div>
 
-                            <div style="text-align:right;">
-                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">تابعنا</div>
+                            <div style="text-align:left;">
+                                <div style="font-size:16px;font-weight:700;color:#2e465f;margin-bottom:14px;">Follow Us</div>
                                 <div style="display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap;">
 
                                     <a t-if="website.social_linkedin or company.social_linkedin"
@@ -102,7 +102,7 @@
                         <!-- bottom area -->
                         <div class="loft-grid-2" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:24px;align-items:end;">
 
-                            <div style="text-align:right;">
+                            <div style="text-align:left;">
                                 <a href="/" style="display:inline-block;text-decoration:none;">
                                     <img src="/logo.png" alt="Loft Construction Logo"
                                          style="max-width:220px;max-height:90px;object-fit:contain;display:block;"/>
@@ -117,11 +117,11 @@
                             <div style="text-align:left;">
                                 <nav aria-label="Footer navigation">
                                     <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:flex-start;">
-                                        <li><a href="/" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">الرئيسية</a></li>
+                                        <li><a href="/" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">Home</a></li>
                                         <li><span style="color:#82aac8;">•</span></li>
-                                        <li><a href="/our-works" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">المشاريع</a></li>
+                                        <li><a href="/our-works" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">Projects</a></li>
                                         <li><span style="color:#82aac8;">•</span></li>
-                                        <li><a href="/contactus" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">اتصل بنا</a></li>
+                                        <li><a href="/contactus" style="text-decoration:none;color:#2e465f;font-size:16px;font-weight:600;">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>

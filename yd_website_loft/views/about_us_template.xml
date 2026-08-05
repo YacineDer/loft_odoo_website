@@ -5,59 +5,73 @@
         <t t-call="website.layout">
             <t t-set="title">Loft Construction — About Us</t>
             <t t-call="yd_website_loft.loft_assets"/>
+            <t t-set="is_ar" t-value="request.env.lang and request.env.lang[:2] == 'ar'"/>
 
-            <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+            <div id="wrap" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'"
+                 style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
 
                 <section class="loft-hero-lines" style="position:relative;padding:130px 0 110px;background:linear-gradient(135deg,#f4f4f4 0%,#eceff2 40%,#dde5eb 100%);overflow:hidden;">
                     <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.65;"/>
                     <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
                     <div style="position:absolute;bottom:-120px;right:-40px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,70,95,0.08) 0%,transparent 75%);border-radius:50%;"/>
 
-                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" dir="rtl" lang="ar">
-                        <div style="max-width:760px;text-align:right;margin-left:auto;">
+                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
+                        <div t-att-style="is_ar and 'max-width:760px;text-align:right;margin-left:auto;' or 'max-width:760px;text-align:left;margin-right:auto;'">
                             <t t-call="yd_website_loft.loft_eyebrow">
-                                <t t-set="text">من نحن</t>
+                                <t t-set="text">About Us</t>
                             </t>
                             <h1 class="loft-hero-title" style="font-size:62px;font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin:0 0 22px;color:#2e465f;">
-                                شركة لوفت للمقاولات العامة
+                                Loft General Contracting Company
                             </h1>
-                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 18px auto;">
-                                نعمل في قطاع البناء والتشييد في دولة الكويت بمنهجية تنفيذ احترافية تركّز على الجودة، الالتزام، والدقة في جميع مراحل المشروع.
+                            <p t-att-style="is_ar and 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 18px auto;' or 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 18px 0;'">
+                                We work in the construction sector in Kuwait with a professional execution methodology focused on quality, commitment, and precision at every stage of the project.
                             </p>
-                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 auto;">
-                                نسعى إلى بناء علاقة طويلة الأمد مع عملائنا من خلال حلول متكاملة تجمع بين الخبرة الفنية، كفاءة التنفيذ، وفهم متطلبات السوق العمراني الحديث.
+                            <p t-att-style="is_ar and 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 auto 0 0;' or 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0;'">
+                                We strive to build long-term relationships with our clients through integrated solutions that combine technical expertise, execution efficiency, and an understanding of the modern urban market’s requirements.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section style="padding:100px 0;background:#ffffff;" dir="rtl" lang="ar">
+                <section style="padding:100px 0;background:#ffffff;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
                         <div class="loft-grid-2" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:24px;">
-                            <div class="loft-card3d" style="padding:44px 36px;text-align:right;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:44px 36px;text-align:right;' or 'padding:44px 36px;text-align:left;'">
                                 <t t-call="yd_website_loft.loft_eyebrow">
-                                    <t t-set="text">قصتنا</t>
+                                    <t t-set="text">Our Story</t>
                                 </t>
                                 <h2 style="font-size:30px;font-weight:800;color:#2e465f;margin:0 0 16px;line-height:1.4;">
-                                    خبرة تنفيذية ورؤية واضحة
+                                    Practical Experience and a Clear Vision
                                 </h2>
                                 <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0 0 14px;">
-                                    تأسست شركة لوفت للمقاولات العامة لتقديم نموذج عمل يعتمد على الاحترافية والوضوح في إدارة وتنفيذ المشاريع الإنشائية.
+                                    Loft General Contracting was established to deliver a business model built on professionalism and clarity in managing and executing construction projects.
                                 </p>
                                 <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0;">
-                                    نؤمن بأن نجاح المشروع لا يقاس فقط بجودة النتيجة النهائية، بل أيضاً بجودة التجربة كاملة من التخطيط وحتى التسليم.
+                                    We believe a project’s success is not measured only by the quality of the final result, but also by the quality of the full experience from planning to handover.
                                 </p>
                             </div>
 
-                            <div class="loft-card3d" style="padding:44px 36px;text-align:right;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:44px 36px;text-align:right;' or 'padding:44px 36px;text-align:left;'">
                                 <t t-call="yd_website_loft.loft_eyebrow">
-                                    <t t-set="text">ما الذي يميزنا</t>
+                                    <t t-set="text">What Sets Us Apart</t>
                                 </t>
                                 <ul style="list-style:none;margin:0;padding:0;display:grid;gap:14px;">
-                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">إدارة دقيقة للمشروع من البداية إلى النهاية.</span></li>
-                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">التزام واضح بالجودة والمواصفات الفنية.</span></li>
-                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">تنسيق احترافي بين فرق التنفيذ والإشراف.</span></li>
-                                    <li style="display:flex;gap:12px;align-items:flex-start;"><span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/><span style="font-size:15px;line-height:1.9;color:#2e465f;">حلول تناسب طبيعة المشروع وتطلعات العميل.</span></li>
+                                    <li t-att-style="is_ar and 'display:flex;gap:12px;align-items:flex-start;flex-direction:row-reverse;' or 'display:flex;gap:12px;align-items:flex-start;'">
+                                        <span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/>
+                                        <span style="font-size:15px;line-height:1.9;color:#2e465f;">Precise project management from start to finish.</span>
+                                    </li>
+                                    <li t-att-style="is_ar and 'display:flex;gap:12px;align-items:flex-start;flex-direction:row-reverse;' or 'display:flex;gap:12px;align-items:flex-start;'">
+                                        <span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/>
+                                        <span style="font-size:15px;line-height:1.9;color:#2e465f;">Clear commitment to quality and technical specifications.</span>
+                                    </li>
+                                    <li t-att-style="is_ar and 'display:flex;gap:12px;align-items:flex-start;flex-direction:row-reverse;' or 'display:flex;gap:12px;align-items:flex-start;'">
+                                        <span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/>
+                                        <span style="font-size:15px;line-height:1.9;color:#2e465f;">Professional coordination between execution and supervision teams.</span>
+                                    </li>
+                                    <li t-att-style="is_ar and 'display:flex;gap:12px;align-items:flex-start;flex-direction:row-reverse;' or 'display:flex;gap:12px;align-items:flex-start;'">
+                                        <span style="width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;"/>
+                                        <span style="font-size:15px;line-height:1.9;color:#2e465f;">Solutions tailored to the project’s nature and the client’s expectations.</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -76,69 +90,71 @@
         <t t-call="website.layout">
             <t t-set="title">Loft Construction — Our Works</t>
             <t t-call="yd_website_loft.loft_assets"/>
+            <t t-set="is_ar" t-value="request.env.lang and request.env.lang[:2] == 'ar'"/>
 
-            <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+            <div id="wrap" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'"
+                 style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
 
                 <section class="loft-hero-lines" style="position:relative;padding:130px 0 110px;background:linear-gradient(135deg,#f4f4f4 0%,#eceff2 40%,#dde5eb 100%);overflow:hidden;">
                     <div class="loft-hero-grid" style="position:absolute;inset:0;opacity:0.65;"/>
                     <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(130,170,200,0.16) 0%,transparent 72%);border-radius:50%;"/>
                     <div style="position:absolute;bottom:-120px;right:-40px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,70,95,0.08) 0%,transparent 75%);border-radius:50%;"/>
 
-                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" dir="rtl" lang="ar">
-                        <div style="max-width:760px;text-align:right;margin-left:auto;">
+                    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px;width:100%;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
+                        <div t-att-style="is_ar and 'max-width:760px;text-align:right;margin-left:auto;' or 'max-width:760px;text-align:left;margin-right:auto;'">
                             <t t-call="yd_website_loft.loft_eyebrow">
-                                <t t-set="text">أعمالنا</t>
+                                <t t-set="text">Our Work</t>
                             </t>
                             <h1 class="loft-hero-title" style="font-size:62px;font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin:0 0 22px;color:#2e465f;">
-                                مشاريع تعبّر عن الجودة والالتزام
+                                Projects That Reflect Quality and Commitment
                             </h1>
-                            <p style="font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 auto 0 0;">
-                                نستعرض مجموعة من الأعمال والمشاريع التي تعكس مستوى التنفيذ، الدقة، والاهتمام بالتفاصيل في مختلف مراحل البناء والتشييد.
+                            <p t-att-style="is_ar and 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 0 auto;' or 'font-size:17px;line-height:1.95;color:#6f7c88;max-width:660px;margin:0 0 0 0;'">
+                                We present a collection of works and projects that reflect the level of execution, precision, and attention to detail across all stages of construction and building.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section style="padding:100px 0;background:#f4f4f4;" dir="rtl" lang="ar">
+                <section style="padding:100px 0;background:#f4f4f4;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
-                        <div style="text-align:right;margin-bottom:46px;">
+                        <div t-att-style="is_ar and 'text-align:right;margin-bottom:46px;' or 'text-align:left;margin-bottom:46px;'">
                             <t t-call="yd_website_loft.loft_eyebrow">
-                                <t t-set="text">مشاريع مختارة</t>
+                                <t t-set="text">Selected Projects</t>
                             </t>
                             <h2 style="font-size:36px;font-weight:800;color:#2e465f;line-height:1.35;margin:0;">
-                                نماذج من أعمال شركة لوفت
+                                Examples of Loft’s Work
                             </h2>
                         </div>
 
                         <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:34px 28px;text-align:right;' or 'padding:34px 28px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-building" aria-hidden="true"/>
                                 </div>
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">مشروع سكني</h3>
-                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">تنفيذ أعمال إنشائية وتشطيبات متكاملة وفق أعلى معايير الجودة.</p>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">Residential Project</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">Executing structural works and full finishing according to the highest quality standards.</p>
                             </div>
 
-                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:34px 28px;text-align:right;' or 'padding:34px 28px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-wrench" aria-hidden="true"/>
                                 </div>
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">أعمال ترميم</h3>
-                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إعادة تأهيل وتطوير المباني مع الحفاظ على كفاءة التنفيذ والجودة.</p>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">Renovation Works</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">Rehabilitating and upgrading buildings while maintaining execution efficiency and quality.</p>
                             </div>
 
-                            <div class="loft-card3d" style="padding:34px 28px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:34px 28px;text-align:right;' or 'padding:34px 28px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-cogs" aria-hidden="true"/>
                                 </div>
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">إدارة وإشراف</h3>
-                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">إدارة مشروع هندسي بمنهجية واضحة تضمن التنسيق والالتزام بالجدول الزمني.</p>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 12px;">Management and Supervision</h3>
+                                <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">Managing engineering projects with a clear methodology that ensures coordination and schedule compliance.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section style="padding:100px 0;background:#ffffff;" dir="rtl" lang="ar">
+                <section style="padding:100px 0;background:#ffffff;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
                         <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
                             <t t-foreach="projects" t-as="project">
@@ -160,7 +176,7 @@
                                         </div>
 
                                         <span t-if="project.area_sqm" class="o_loft_area_badge">
-                                            <t t-esc="int(project.area_sqm)"/> م²
+                                            <t t-esc="int(project.area_sqm)"/> m²
                                         </span>
                                     </div>
                                 </div>

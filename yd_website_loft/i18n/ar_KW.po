@@ -1,0 +1,798 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * yd_website_loft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-05 20:29+0000\n"
+"PO-Revision-Date: 2026-08-05 20:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"<select id=\"service\" name=\"service\" style=\"width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);\">\n"
+"                                        <option value=\"\">Select a service</option>\n"
+"                                        <option value=\"residential_building\">Residential Construction Projects</option>\n"
+"                                        <option value=\"renovation\">Renovation and Maintenance Works</option>\n"
+"                                        <option value=\"concrete\">Concrete Structural Works</option>\n"
+"                                        <option value=\"finishing\">Complete Finishing Works</option>\n"
+"                                        <option value=\"project_management\">Project Management and Engineering Supervision</option>\n"
+"                                    </select>"
+msgstr ""
+"<select id=\"service\" name=\"service\" style=\"width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);\">\n"
+"                                        <option value=\"\">اختر خدمة</option>\n"
+"                                        <option value=\"residential_building\">مشاريع البناء السكني</option>\n"
+"                                        <option value=\"renovation\">أعمال الترميم والصيانة</option>\n"
+"                                        <option value=\"concrete\">أعمال الهياكل الخرسانية</option>\n"
+"                                        <option value=\"finishing\">أعمال التشطيبات الكاملة</option>\n"
+"                                        <option value=\"project_management\">إدارة المشاريع والإشراف الهندسي</option>\n"
+"                                    </select>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "<span style=\"color:#82aac8;\">•</span>"
+msgstr "<span style=\"color:#82aac8;\">•</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">Clear commitment to quality and technical specifications.</span>"
+msgstr ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">التزام واضح بالجودة والمواصفات الفنية.</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">Precise project management from start to finish.</span>"
+msgstr ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">إدارة دقيقة للمشروع من البداية إلى النهاية.</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">Professional coordination between execution and supervision teams.</span>"
+msgstr ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">تنسيق احترافي بين فرق التنفيذ والإشراف.</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">Solutions tailored to the project’s nature and the client’s expectations.</span>"
+msgstr ""
+"<span style=\"width:10px;height:10px;background:#82aac8;border-radius:50%;margin-top:8px;flex-shrink:0;\"/>\n"
+"                                        <span style=\"font-size:15px;line-height:1.9;color:#2e465f;\">حلول مصممة بما يتناسب مع طبيعة المشروع وتوقعات العميل.</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_cta_banner
+msgid ""
+"<span style=\"width:42px;height:3px;background:linear-gradient(90deg,#82aac8,#e4e4e4);display:inline-block;border-radius:2px;\"/>\n"
+"                    <span style=\"font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#82aac8;font-weight:700;\">Contact Us</span>"
+msgstr ""
+"<span style=\"width:42px;height:3px;background:linear-gradient(90deg,#82aac8,#e4e4e4);display:inline-block;border-radius:2px;\"/>\n"
+"                    <span style=\"font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#82aac8;font-weight:700;\">تواصل معنا</span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        Commitment to quality and precision in execution."
+msgstr ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        الالتزام بالجودة والدقة في التنفيذ."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        Fast and professional response."
+msgstr ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        استجابة سريعة واحترافية."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        Solutions tailored to the project type."
+msgstr ""
+"<span style=\"width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;\"/>\n"
+"                                        حلول مخصصة حسب نوع المشروع."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "<span>Copyright © </span>"
+msgstr "<span>حقوق النشر © </span>"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "About Us"
+msgstr "من نحن"
+
+#. module: yd_website_loft
+#: model:website.menu,name:yd_website_loft.menu_about_us_loft
+msgid "About Us "
+msgstr "من نحن "
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Additional Information"
+msgstr "معلومات إضافية"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_contact_strip
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Address"
+msgstr "العنوان"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__area_sqm
+msgid "Area (sqm)"
+msgstr "المساحة (م²)"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid "Building long-term relationships based on trust with our clients."
+msgstr "بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Call Us"
+msgstr "اتصل بنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Complete Finishing Works"
+msgstr "أعمال التشطيبات الكاملة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Concrete Structural Works"
+msgstr "أعمال الهياكل الخرسانية"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Contact us directly for urgent inquiries and project discussions."
+msgstr "تواصل معنا مباشرة للاستفسارات العاجلة ومناقشة المشاريع."
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__create_uid
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__create_date
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__display_name
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_contact_strip
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Email Us"
+msgstr "راسلنا عبر البريد الإلكتروني"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Examples of Loft’s Work"
+msgstr "نماذج من أعمال لوفت"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Executing complete finishing works according to approved specifications and "
+"with high quality."
+msgstr ""
+"تنفيذ أعمال التشطيبات الكاملة وفقًا للمواصفات المعتمدة وبجودة عالية."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Executing concrete structural works with high precision and in accordance "
+"with approved technical specifications."
+msgstr ""
+"تنفيذ الأعمال الخرسانية الإنشائية بدقة عالية ووفقًا للمواصفات الفنية المعتمدة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid ""
+"Executing projects according to the highest standards and best global "
+"practices."
+msgstr ""
+"تنفيذ المشاريع وفق أعلى المعايير وأفضل الممارسات العالمية."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Executing residential construction projects through all phases, according to"
+" the highest quality standards."
+msgstr ""
+"تنفيذ مشاريع البناء السكني عبر جميع المراحل، وفق أعلى معايير الجودة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid ""
+"Executing structural works and full finishing according to the highest "
+"quality standards."
+msgstr ""
+"تنفيذ الأعمال الإنشائية والتشطيبات الكاملة وفق أعلى معايير الجودة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Facebook"
+msgstr "فيسبوك"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"Fill out the form below and our team will contact you to discuss the "
+"details, scope of work, and expected timeline."
+msgstr ""
+"املأ النموذج أدناه وسيتواصل معك فريقنا لمناقشة التفاصيل ونطاق العمل والجدول الزمني المتوقع."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Follow Us"
+msgstr "تابعنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Footer navigation"
+msgstr "تصفح التذييل"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"From the beginning, the company has focused on balancing high quality with "
+"meeting deadlines by providing integrated solutions that meet the needs of "
+"the construction market. The company relies on a specialized team and a "
+"professional execution methodology to ensure projects are completed "
+"efficiently and with high quality, meeting client expectations and keeping "
+"pace with urban development in Kuwait."
+msgstr ""
+"منذ البداية، ركزت الشركة على تحقيق التوازن بين الجودة العالية والالتزام بالمواعيد النهائية من خلال تقديم حلول متكاملة تلبي احتياجات سوق البناء. وتعتمد الشركة على فريق متخصص ومنهجية تنفيذ احترافية لضمان إنجاز المشاريع بكفاءة وبجودة عالية، بما يلبي توقعات العملاء ويواكب التطور العمراني في الكويت."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Home"
+msgstr "الرئيسية"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__id
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__image_ids
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.view_loft_project_form
+msgid "Images"
+msgstr "الصور"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid "Innovation and Sustainability"
+msgstr "الابتكار والاستدامة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Instagram"
+msgstr "إنستغرام"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Integrity and Commitment"
+msgstr "النزاهة والالتزام"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Jibla - Fahad Al-Salem Street - Sanam Tower - 16th Floor."
+msgstr "القبلة - شارع فهد السالم - برج السنام - الطابق السادس عشر."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "LOFT <br/>Construction"
+msgstr "لوفت <br/>للتشييد"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "LOFT FOR BUILDING CONSTRUCTION"
+msgstr "لوفت للمقاولات والتشييد"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__write_uid
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__write_date
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Latest Completed Projects"
+msgstr "أحدث المشاريع المنجزة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "LinkedIn"
+msgstr "لينكدإن"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Loft Construction Logo"
+msgstr "شعار لوفت للمقاولات"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Loft Construction offers a comprehensive range of services in the "
+"construction sector"
+msgstr ""
+"تقدم لوفت للمقاولات مجموعة شاملة من الخدمات في قطاع البناء"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid "Loft Construction — About Us"
+msgstr "لوفت للمقاولات — من نحن"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Loft Construction — Contact Us"
+msgstr "لوفت للمقاولات — تواصل معنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Loft Construction — General Contracting &amp; Renovation"
+msgstr "لوفت للمقاولات — المقاولات العامة والترميم"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Loft Construction — Map Location"
+msgstr "لوفت للمقاولات — موقع الخريطة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Loft Construction — Our Works"
+msgstr "لوفت للمقاولات — أعمالنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Loft General Contracting Company"
+msgstr "شركة لوفت للمقاولات العامة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Loft General Contracting is a company specialized in the construction sector"
+" and has been operating in Kuwait since 2019. Since its establishment, the "
+"company has aimed to be a trusted partner in delivering modern architectural"
+" projects."
+msgstr ""
+"لوفت للمقاولات العامة هي شركة متخصصة في قطاع البناء وتعمل في الكويت منذ عام 2019. ومنذ تأسيسها، سعت الشركة إلى أن تكون شريكًا موثوقًا في تنفيذ المشاريع المعمارية الحديثة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid ""
+"Loft General Contracting is guided by a set of core values that form the "
+"foundation of its work and continuous growth."
+msgstr ""
+"تسترشد لوفت للمقاولات العامة بمجموعة من القيم الأساسية التي تشكل أساس عملها ونموها المستمر."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"Loft General Contracting was established to deliver a business model built "
+"on professionalism and clarity in managing and executing construction "
+"projects."
+msgstr ""
+"تأسست لوفت للمقاولات العامة لتقديم نموذج عمل قائم على الاحترافية والوضوح في إدارة وتنفيذ المشاريع الإنشائية."
+
+#. module: yd_website_loft
+#: model:ir.model,name:yd_website_loft.model_loft_project
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.view_loft_project_form
+msgid "Loft Project"
+msgstr "مشروع لوفت"
+
+#. module: yd_website_loft
+#: model:ir.model,name:yd_website_loft.model_loft_project_image
+msgid "Loft Project Image"
+msgstr "صورة مشروع لوفت"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__image
+msgid "Main Image"
+msgstr "الصورة الرئيسية"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Management and Supervision"
+msgstr "الإدارة والإشراف"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid ""
+"Managing engineering projects with a clear methodology that ensures "
+"coordination and schedule compliance."
+msgstr ""
+"إدارة المشاريع الهندسية بمنهجية واضحة تضمن التنسيق والالتزام بالجدول الزمني."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Managing projects and providing engineering supervision through a clear "
+"professional methodology that ensures execution quality."
+msgstr ""
+"إدارة المشاريع وتقديم الإشراف الهندسي من خلال منهجية احترافية واضحة تضمن جودة التنفيذ."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_vision_mission
+msgid "Mission"
+msgstr "الرسالة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__name
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Our Location"
+msgstr "موقعنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Our Services"
+msgstr "خدماتنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid "Our Story"
+msgstr "قصتنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid "Our Values"
+msgstr "قيمنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_vision_mission
+msgid "Our Vision and Mission"
+msgstr "رؤيتنا ورسالتنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Our Work"
+msgstr "أعمالنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"Our office is located in Kuwait, and you are welcome to visit us during "
+"official working hours."
+msgstr ""
+"يقع مكتبنا في الكويت، ويسعدنا استقبالكم خلال ساعات العمل الرسمية."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_contact_strip
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid "Practical Experience and a Clear Vision"
+msgstr "خبرة عملية ورؤية واضحة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__project_id
+msgid "Project"
+msgstr "المشروع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Project Details"
+msgstr "تفاصيل المشروع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.view_loft_project_form
+msgid "Project Image"
+msgstr "صورة المشروع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Project Management and Engineering Supervision"
+msgstr "إدارة المشاريع والإشراف الهندسي"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.view_loft_project_form
+msgid "Project name"
+msgstr "اسم المشروع"
+
+#. module: yd_website_loft
+#: model:ir.actions.act_window,name:yd_website_loft.action_loft_project
+#: model:ir.ui.menu,name:yd_website_loft.menu_loft_project
+#: model:website.menu,name:yd_website_loft.menu_our_works_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Projects"
+msgstr "المشاريع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Projects That Reflect Quality and Commitment"
+msgstr "مشاريع تعكس الجودة والالتزام"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+msgid ""
+"Providing modern solutions that look to the future and keep pace with market"
+" aspirations."
+msgstr ""
+"تقديم حلول حديثة تتطلع إلى المستقبل وتواكب طموحات السوق."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_values
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Quality and Professionalism"
+msgstr "الجودة والاحترافية"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid ""
+"Rehabilitating and upgrading buildings while maintaining execution "
+"efficiency and quality."
+msgstr ""
+"تأهيل وتطوير المباني مع الحفاظ على كفاءة التنفيذ والجودة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid ""
+"Rehabilitating buildings and providing sustainable maintenance solutions."
+msgstr ""
+"تأهيل المباني وتقديم حلول صيانة مستدامة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Renovation Works"
+msgstr "أعمال الترميم"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Renovation and Maintenance Works"
+msgstr "أعمال الترميم والصيانة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Residential Construction Projects"
+msgstr "مشاريع البناء السكني"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Residential Project"
+msgstr "مشروع سكني"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "Selected Projects"
+msgstr "المشاريع المختارة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+msgid "Selected Works"
+msgstr "أعمال مختارة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Send Message"
+msgstr "إرسال الرسالة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Send Us a Message"
+msgstr "أرسل لنا رسالة"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"Send us your requirements or project files and we will reply as soon as "
+"possible."
+msgstr ""
+"أرسل إلينا متطلباتك أو ملفات مشروعك وسنرد عليك في أقرب وقت ممكن."
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__sequence
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project_image__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Service Type"
+msgstr "نوع الخدمة"
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__short_description
+msgid "Short Description"
+msgstr "وصف مختصر"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.view_loft_project_form
+msgid "Short description for website"
+msgstr "وصف مختصر للموقع الإلكتروني"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_cta_banner
+msgid "Start Your Project with Loft"
+msgstr "ابدأ مشروعك مع لوفت"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Tell Us About Your Project"
+msgstr "أخبرنا عن مشروعك"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_vision_mission
+msgid ""
+"To deliver pioneering construction projects using the latest digital tools "
+"and engineering techniques to ensure maximum execution efficiency and "
+"outstanding final quality, while creating added value for our partners and "
+"society."
+msgstr ""
+"تقديم مشاريع إنشائية رائدة باستخدام أحدث الأدوات الرقمية والتقنيات الهندسية لضمان أقصى كفاءة في التنفيذ وجودة نهائية متميزة، مع خلق قيمة مضافة لشركائنا ولمجتمعنا."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_vision_mission
+msgid ""
+"To lead the future of the construction sector in Kuwait by integrating "
+"advanced technology and innovative engineering solutions to build smart, "
+"sustainable urban communities that inspire future generations."
+msgstr ""
+"قيادة مستقبل قطاع البناء في الكويت من خلال دمج التقنيات المتقدمة والحلول الهندسية المبتكرة لبناء مجتمعات حضرية ذكية ومستدامة تلهم الأجيال القادمة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "Twitter"
+msgstr "تويتر"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_vision_mission
+msgid "Vision"
+msgstr "الرؤية"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"We believe a project’s success is not measured only by the quality of the "
+"final result, but also by the quality of the full experience from planning "
+"to handover."
+msgstr ""
+"نؤمن بأن نجاح المشروع لا يقاس فقط بجودة النتيجة النهائية، بل أيضًا بجودة التجربة الكاملة من التخطيط حتى التسليم."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid ""
+"We help you assess the idea, review the requirements, and provide a clear "
+"initial concept that helps you start your project with confidence."
+msgstr ""
+"نساعدك على تقييم الفكرة ومراجعة المتطلبات وتقديم تصور أولي واضح يساعدك على بدء مشروعك بثقة."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid ""
+"We present a collection of works and projects that reflect the level of "
+"execution, precision, and attention to detail across all stages of "
+"construction and building."
+msgstr ""
+"نقدم مجموعة من الأعمال والمشاريع التي تعكس مستوى التنفيذ والدقة والاهتمام بالتفاصيل عبر جميع مراحل البناء والتشييد."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_cta_banner
+msgid ""
+"We provide integrated solutions in the construction and building sector, "
+"with a clear commitment to quality, precision, and timely delivery at every "
+"stage of execution."
+msgstr ""
+"نقدم حلولًا متكاملة في قطاع البناء والتشييد، مع التزام واضح بالجودة والدقة والالتزام بالتسليم في الوقت المناسب في كل مرحلة من مراحل التنفيذ."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"We strive to build long-term relationships with our clients through "
+"integrated solutions that combine technical expertise, execution efficiency,"
+" and an understanding of the modern urban market’s requirements."
+msgstr ""
+"نسعى إلى بناء علاقات طويلة الأمد مع عملائنا من خلال حلول متكاملة تجمع بين الخبرة الفنية وكفاءة التنفيذ وفهم متطلبات السوق العمراني الحديث."
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid ""
+"We work in the construction sector in Kuwait with a professional execution "
+"methodology focused on quality, commitment, and precision at every stage of "
+"the project."
+msgstr ""
+"نعمل في قطاع البناء في الكويت بمنهجية تنفيذ احترافية تركز على الجودة والالتزام والدقة في كل مرحلة من مراحل المشروع."
+
+#. module: yd_website_loft
+#: model:ir.model.fields,field_description:yd_website_loft.field_loft_project__website_published
+msgid "Website Published"
+msgstr "منشور على الموقع"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_about_us_view
+msgid "What Sets Us Apart"
+msgstr "ما يميزنا"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_contact
+msgid "Why Contact Us?"
+msgstr "لماذا تتواصل معنا؟"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.loft_footer_override
+msgid "YouTube"
+msgstr "يوتيوب"
+
+#. module: yd_website_loft
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_home
+#: model_terms:ir.ui.view,arch_db:yd_website_loft.page_our_works_view
+msgid "m²"
+msgstr "م²"

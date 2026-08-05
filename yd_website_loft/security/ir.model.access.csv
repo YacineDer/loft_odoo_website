@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_loft_project_user,access.loft.project.user,model_loft_project,base.group_user,1,1,1,1
 access_loft_project_image_user,access.loft.project.image.user,model_loft_project_image,base.group_user,1,1,1,1
+access_loft_project_public,loft.project.public,model_loft_project,base.group_public,1,0,0,0
+access_loft_project_image_public,loft.project.image.public,model_loft_project_image,base.group_public,1,0,0,0
+access_loft_project_portal,loft.project.portal,model_loft_project,base.group_portal,1,0,0,0
+access_loft_project_image_portal,loft.project.image.portal,model_loft_project_image,base.group_portal,1,0,0,0

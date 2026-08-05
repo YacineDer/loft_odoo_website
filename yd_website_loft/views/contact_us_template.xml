@@ -5,20 +5,22 @@
         <t t-call="website.layout">
             <t t-set="title">Loft Construction — Contact Us</t>
             <t t-call="yd_website_loft.loft_assets"/>
+            <t t-set="is_ar" t-value="request.env.lang and request.env.lang[:2] == 'ar'"/>
 
-            <div id="wrap" style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
+            <div id="wrap" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'"
+                 style="background:#f4f4f4;color:#2e465f;font-family:'Inter','Helvetica Neue',sans-serif;overflow-x:hidden;">
 
                 <!-- Contact info cards -->
                 <section style="padding:90px 0 40px;background:#f4f4f4;">
-                    <div style="max-width:1180px;margin:0 auto;padding:0 24px;" dir="rtl" lang="ar">
+                    <div style="max-width:1180px;margin:0 auto;padding:0 24px;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                         <div class="loft-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-                            <div class="loft-card3d" style="padding:36px 30px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:36px 30px;text-align:right;' or 'padding:36px 30px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-phone" aria-hidden="true"/>
                                 </div>
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">الهاتف</h3>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">Phone</h3>
                                 <p style="font-size:15px;line-height:1.9;color:#9e9e9e;margin:0 0 12px;">
-                                    تواصل معنا مباشرة للاستفسارات العاجلة ومناقشة تفاصيل المشروع.
+                                    Contact us directly for urgent inquiries and project discussions.
                                 </p>
                                 <a t-if="website.company_id.phone"
                                    t-att-href="'tel:%s' % website.company_id.phone"
@@ -27,13 +29,13 @@
                                 <div t-else="" style="font-size:20px;font-weight:700;color:#2e465f;">—</div>
                             </div>
 
-                            <div class="loft-card3d" style="padding:36px 30px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:36px 30px;text-align:right;' or 'padding:36px 30px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-envelope" aria-hidden="true"/>
                                 </div>
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">البريد الإلكتروني</h3>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">Email</h3>
                                 <p style="font-size:15px;line-height:1.9;color:#9e9e9e;margin:0 0 12px;">
-                                    أرسل لنا متطلباتك أو ملفات المشروع وسنقوم بالرد في أقرب وقت.
+                                    Send us your requirements or project files and we will reply as soon as possible.
                                 </p>
                                 <a t-if="website.company_id.email"
                                    t-att-href="'mailto:%s' % website.company_id.email"
@@ -42,14 +44,14 @@
                                 <div t-else="" style="font-size:18px;font-weight:700;color:#2e465f;">—</div>
                             </div>
 
-                            <div class="loft-card3d" style="padding:36px 30px;text-align:right;">
-                                <div class="loft-icon-box" style="margin-right:0;margin-bottom:22px;">
+                            <div class="loft-card3d" t-att-style="is_ar and 'padding:36px 30px;text-align:right;' or 'padding:36px 30px;text-align:left;'">
+                                <div class="loft-icon-box" t-att-style="is_ar and 'margin-right:0;margin-bottom:22px;' or 'margin-left:0;margin-bottom:22px;'">
                                     <i class="fa fa-map-marker" aria-hidden="true"/>
                                 </div>
 
-                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">العنوان</h3>
+                                <h3 style="font-size:20px;font-weight:800;color:#2e465f;margin:0 0 10px;">Address</h3>
                                 <p style="font-size:15px;line-height:1.9;color:#9e9e9e;margin:0 0 12px;">
-                                    مقر الشركة في الكويت، ويمكنكم زيارتنا خلال ساعات العمل الرسمية.
+                                    Our office is located in Kuwait, and you are welcome to visit us during official working hours.
                                 </p>
 
                                 <div t-if="website.company_id.partner_id"
@@ -68,15 +70,15 @@
                     <div style="max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:24px;" class="loft-about-grid">
 
                         <!-- Contact form -->
-                        <div class="loft-card3d" style="padding:42px 34px;background:linear-gradient(145deg,#ffffff 0%,#f7f7f7 100%);" dir="rtl" lang="ar">
+                        <div class="loft-card3d" t-att-style="is_ar and 'padding:42px 34px;background:linear-gradient(145deg,#ffffff 0%,#f7f7f7 100%);text-align:right;' or 'padding:42px 34px;background:linear-gradient(145deg,#ffffff 0%,#f7f7f7 100%);text-align:left;'" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                             <t t-call="yd_website_loft.loft_eyebrow">
-                                <t t-set="text">أرسل رسالتك</t>
+                                <t t-set="text">Send Us a Message</t>
                             </t>
                             <h2 style="font-size:34px;font-weight:800;color:#2e465f;line-height:1.35;margin:0 0 14px;">
-                                أخبرنا عن مشروعك
+                                Tell Us About Your Project
                             </h2>
                             <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0 0 28px;max-width:none;">
-                                املأ النموذج التالي وسيقوم فريقنا بالتواصل معك لمناقشة التفاصيل، نطاق العمل، والجدول الزمني المتوقع.
+                                Fill out the form below and our team will contact you to discuss the details, scope of work, and expected timeline.
                             </p>
 
                             <form action="/contact/submit" method="post" style="display:grid;gap:18px;">
@@ -84,12 +86,12 @@
 
                                 <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px;" class="loft-grid-2">
                                     <div>
-                                        <label for="name" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">الاسم الكامل</label>
+                                        <label for="name" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Full Name</label>
                                         <input id="name" name="name" type="text" required="required"
                                             style="width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);"/>
                                     </div>
                                     <div>
-                                        <label for="phone" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">رقم الهاتف</label>
+                                        <label for="phone" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Phone Number</label>
                                         <input id="phone" name="phone" type="text"
                                             style="width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);"/>
                                     </div>
@@ -97,32 +99,32 @@
 
                                 <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px;" class="loft-grid-2">
                                     <div>
-                                        <label for="email" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">البريد الإلكتروني</label>
+                                        <label for="email" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Email</label>
                                         <input id="email" name="email" type="email" required="required"
                                             style="width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);"/>
                                     </div>
                                     <div>
-                                        <label for="subject" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">موضوع الرسالة</label>
+                                        <label for="subject" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Subject</label>
                                         <input id="subject" name="subject" type="text"
                                             style="width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);"/>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label for="service" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">نوع الخدمة</label>
+                                    <label for="service" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Service Type</label>
                                     <select id="service" name="service"
                                         style="width:100%;height:54px;border:1px solid rgba(158,158,158,0.22);border-radius:14px;padding:0 16px;background:#ffffff;color:#2e465f;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);">
-                                        <option value="">اختر الخدمة</option>
-                                        <option value="residential_building">تنفيذ مشاريع البناء السكني</option>
-                                        <option value="renovation">أعمال الترميم والصيانة</option>
-                                        <option value="concrete">الأعمال الإنشائية الخرسانية</option>
-                                        <option value="finishing">أعمال التشطيبات الكاملة</option>
-                                        <option value="project_management">إدارة المشاريع والإشراف الهندسي</option>
+                                        <option value="">Select a service</option>
+                                        <option value="residential_building">Residential Construction Projects</option>
+                                        <option value="renovation">Renovation and Maintenance Works</option>
+                                        <option value="concrete">Concrete Structural Works</option>
+                                        <option value="finishing">Complete Finishing Works</option>
+                                        <option value="project_management">Project Management and Engineering Supervision</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label for="message" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">تفاصيل المشروع</label>
+                                    <label for="message" style="display:block;font-size:13px;font-weight:700;color:#2e465f;margin-bottom:8px;">Project Details</label>
                                     <textarea id="message" name="message" rows="6" required="required"
                                         style="width:100%;border:1px solid rgba(158,158,158,0.22);border-radius:18px;padding:16px;background:#ffffff;color:#2e465f;outline:none;resize:vertical;min-height:170px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.85);"></textarea>
                                 </div>
@@ -130,43 +132,43 @@
                                 <div style="display:flex;justify-content:flex-start;padding-top:8px;">
                                     <button type="submit"
                                         style="height:54px;padding:0 30px;border:none;border-radius:14px;background:linear-gradient(145deg,#2e465f 0%,#3d5874 100%);color:#ffffff;font-size:15px;font-weight:700;box-shadow:0 12px 26px rgba(46,70,95,0.20);transition:all .3s ease;">
-                                        إرسال الرسالة
+                                        Send Message
                                     </button>
                                 </div>
                             </form>
                         </div>
 
                         <!-- Sidebar -->
-                        <div style="display:grid;gap:24px;" dir="rtl" lang="ar">
+                        <div style="display:grid;gap:24px;" t-att-dir="is_ar and 'rtl' or 'ltr'" t-att-lang="is_ar and 'ar' or 'en'">
                             <div class="loft-card3d" style="padding:36px 30px;">
                                 <t t-call="yd_website_loft.loft_eyebrow">
-                                    <t t-set="text">معلومات إضافية</t>
+                                    <t t-set="text">Additional Information</t>
                                 </t>
-                                <h3 style="font-size:24px;font-weight:800;color:#2e465f;margin:0 0 14px;">لماذا تتواصل معنا؟</h3>
+                                <h3 style="font-size:24px;font-weight:800;color:#2e465f;margin:0 0 14px;">Why Contact Us?</h3>
                                 <p style="font-size:15px;line-height:2;color:#9e9e9e;margin:0 0 18px;">
-                                    نساعدك في دراسة الفكرة، مراجعة المتطلبات، وتقديم تصور أولي واضح يساعدك على بدء المشروع بثقة.
+                                    We help you assess the idea, review the requirements, and provide a clear initial concept that helps you start your project with confidence.
                                 </p>
                                 <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
                                     <li style="display:flex;align-items:flex-start;gap:10px;color:#2e465f;font-size:15px;line-height:1.8;">
                                         <span style="width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;"/>
-                                        استجابة سريعة واحترافية.
+                                        Fast and professional response.
                                     </li>
                                     <li style="display:flex;align-items:flex-start;gap:10px;color:#2e465f;font-size:15px;line-height:1.8;">
                                         <span style="width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;"/>
-                                        حلول مناسبة لطبيعة المشروع.
+                                        Solutions tailored to the project type.
                                     </li>
                                     <li style="display:flex;align-items:flex-start;gap:10px;color:#2e465f;font-size:15px;line-height:1.8;">
                                         <span style="width:8px;height:8px;border-radius:50%;background:#82aac8;display:inline-block;flex-shrink:0;margin-top:10px;"/>
-                                        التزام بالجودة والدقة في التنفيذ.
+                                        Commitment to quality and precision in execution.
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="loft-card3d" style="padding:0;overflow:hidden;">
-                                <div style="padding:30px 28px 18px;text-align:right;">
-                                    <h3 style="font-size:22px;font-weight:800;color:#2e465f;margin:0 0 10px;">موقعنا</h3>
+                                <div style="padding:30px 28px 18px;text-align:left;">
+                                    <h3 style="font-size:22px;font-weight:800;color:#2e465f;margin:0 0 10px;">Our Location</h3>
                                     <p style="font-size:14px;line-height:1.9;color:#9e9e9e;margin:0;">
-                                        جبلة - شارع فهد السالم - برج سنام - الدور ١٦.
+                                        Jibla - Fahad Al-Salem Street - Sanam Tower - 16th Floor.
                                     </p>
                                 </div>
                                 <div style="height:320px;position:relative;">
@@ -176,14 +178,13 @@
                                         allowfullscreen="allowfullscreen"
                                         loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade"
-                                        title="Loft Construction — الموقع على الخريطة"/>
+                                        title="Loft Construction — Map Location"/>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </section>
-
 
             </div>
         </t>
